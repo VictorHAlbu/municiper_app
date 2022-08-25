@@ -3,6 +3,7 @@ class CreateAddresses < ActiveRecord::Migration[6.1]
     create_table :addresses do |t|
       t.string :zipcode, default: '', null: false
       t.string :street, default: '', null: false
+      t.string :status, default: 0, null: false
       t.string :complement, default: ''
       t.string :neighboorhood, default: '', null: false
       t.string :city, default: '', null: false

@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2022_08_25_194435) do
   create_table "addresses", force: :cascade do |t|
     t.string "zipcode", default: "", null: false
     t.string "street", default: "", null: false
+    t.string "status", default: "0", null: false
     t.string "complement", default: ""
     t.string "neighboorhood", default: "", null: false
     t.string "city", default: "", null: false
