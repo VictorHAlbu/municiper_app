@@ -19,6 +19,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'cpf_validator', '~> 0.2.1'
 gem 'activestorage-validator', '~> 0.2.2'
+gem 'enumerate_it'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
