@@ -12,7 +12,7 @@ RSpec.describe ResidentsController, type: :controller do
 
   context 'POST create' do
     let(:params) { attributes_for(:resident) }
-
+    
     before { post :create, params: { resident: params }, format: :html }
 
     it { is_expected.to(route(:post, '/residents').to(action: :create)) }

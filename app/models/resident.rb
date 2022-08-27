@@ -18,7 +18,8 @@ class Resident < ApplicationRecord
                                             size_range: 1..(5.megabytes) }
 
   validate :birthdate_between_zero_and_125_years_ago
-
+  accepts_nested_attributes_for :addresses
+  
   before_validation :cleasing
 
   private

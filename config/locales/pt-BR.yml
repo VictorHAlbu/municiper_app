@@ -6,12 +6,27 @@ pt-BR:
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    models:
+      resident: Munícipe
   attributes:
     full_name: Nome Completo
     document: CPF
     health_card_document: CNS
     birthdate: Data de Aniversário
     phone: Telefone
+    photo: Foto
+    zipcode: CEP
+    street: Logradouro
+    complement: Completo
+    neighboorhood: Bairro
+    city: Cidade
+    state: UF
+    ibge_code: Codigo IBGE
+  residents:
+    new_resident_modal_form:
+      new: Novo
+    index:
+      new_resident: Novo Munícipe
   date:
     abbr_day_names:
     - dom
