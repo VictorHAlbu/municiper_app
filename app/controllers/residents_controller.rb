@@ -1,8 +1,13 @@
 class ResidentsController < ApplicationController
 
-  def idex
+  def index
     @residents = Resident
       .search(search_params, params[:search])
+  end
+
+  def new
+    @resident = Resident.new
+    @resident.addresses.build
   end
 
   private
@@ -10,4 +15,5 @@ class ResidentsController < ApplicationController
   def search_params
     ["residents.full_name", "residents.email", "residents.addresses", "residents.status"]
   end
+  
 end

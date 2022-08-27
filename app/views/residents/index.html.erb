@@ -1,0 +1,28 @@
+<div class="page-header">
+  <%= link_to new_resident_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    Novo Municipe
+  <% end %>
+  <h1>Listando Municipe</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th> <%= Resident.human_attribute_name(:full_name) %> </th>
+        <th> <%= Resident.human_attribute_name(:document) %> </th>
+        <th> <%= Resident.human_attribute_name(:health_card_document) %> </th>
+        <th> <%= Resident.human_attribute_name(:email) %> </th>
+        <th> <%= Resident.human_attribute_name(:birthdate) %> </th>
+        <th> <%= Resident.human_attribute_name(:phone) %> </th>
+        <th> <%= Resident.human_attribute_name(:status) %> </th>
+        <th> </th>
+      </tr>
+    </thead>
+
+    <tbody>
+     
+    </tbody>
+  </table>
+</div>
