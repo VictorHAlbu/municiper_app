@@ -1,0 +1,13 @@
+<% @residents.each do |resident| %>
+  <%= content_tag :tr, id: dom_id(resident), class: dom_class(resident) do %>
+                <td><%= resident.full_name %></td>
+                <td><%= resident.document %></td>
+                <td><%= resident.health_card_document %></td>
+                <td><%= resident.email %></td>
+                <td><%= resident.birthdate %></td>
+                <td><%= resident.phone %></td>
+                <td><%= resident.status %></td>
+    <td><%= link_to 'Editar', edit_resident_path(resident) %></td>
+    <td><%= link_to 'Apagar', resident, method: :delete, data: { confirm: 'Confirma?' } %></td>
+  <% end %>
+<% end %>
