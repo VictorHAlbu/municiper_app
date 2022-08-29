@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :residents, only: %i[index create update new]
+  resources :residents
 
   root 'residents#index'
 end
