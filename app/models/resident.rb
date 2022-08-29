@@ -7,8 +7,7 @@ class Resident < ApplicationRecord
   has_many :addresses, as: :addressable
   validates :full_name, presence: true, length: { maximum: 255 }
   validates :document, presence: true, cpf: true
-  validates :health_card_document, presence: true,
-                                   brazilian_health_card_number: true
+  validates :health_card_document, presence: true
   validates :email, presence: true,
                     format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create },
                     length: { maximum: 255 }

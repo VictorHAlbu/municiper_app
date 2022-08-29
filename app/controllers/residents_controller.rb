@@ -1,7 +1,7 @@
 class ResidentsController < ApplicationController
 
   def index
-    @residents = Resident.all
+    @residents = Resident.search(search_params, params[:search])
   end
 
   def edit
