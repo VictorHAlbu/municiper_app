@@ -1,8 +1,8 @@
 <% @residents.each do |resident| %>
   <%= content_tag :tr, id: dom_id(resident), class: dom_class(resident) do %>
                 <td><%= resident.full_name %></td>
-                <td><%= resident.document %></td>
-                <td><%= resident.health_card_document %></td>
+                <td><%= format_document(resident.document) %></td>
+                <td><%= format_brazilian_health_card_number(resident.health_card_document) %></td>
                 <td><%= resident.email %></td>
                 <td><%= resident.birthdate %></td>
                 <td><%= resident.phone %></td>

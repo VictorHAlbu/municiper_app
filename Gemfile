@@ -21,6 +21,7 @@ gem 'cpf_validator', '~> 0.2.1'
 gem 'activestorage-validator', '~> 0.2.2'
 gem 'enumerate_it'
 gem 'sidekiq', '~> 6.5', '>= 6.5.1'
+gem 'jquery-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
