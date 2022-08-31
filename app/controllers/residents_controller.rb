@@ -17,9 +17,10 @@ class ResidentsController < ApplicationController
     @resident, @addresses =
       Residents::CreatorService.call(valid_params: valid_params)
     if @resident.save
+      SmsService.new.send_sms(@resident)
       redirect_to residents_path
     else
-      flash[:errors] = "New User created."
+      flash[:errors] = "Erro ao Criar Municipe"
     end  
   end
 

@@ -22,6 +22,8 @@ gem 'activestorage-validator', '~> 0.2.2'
 gem 'enumerate_it'
 gem 'sidekiq', '~> 6.5', '>= 6.5.1'
 gem 'jquery-rails'
+gem 'dotenv-rails'
+gem 'twilio-ruby', '~> 5.71.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
