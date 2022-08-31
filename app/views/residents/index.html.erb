@@ -4,6 +4,12 @@
     Novo Municipe
   <% end %>
   <h1>Listando Municipe</h1>
+  <%= form_tag residents_path, :action => 'index', :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Pesquisar" %>
+      </p>
+  <% end %>
 </div>
 
 <div class="table-responsive">

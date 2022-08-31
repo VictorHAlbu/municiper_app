@@ -1,7 +1,9 @@
 class ResidentsController < ApplicationController
 
   def index
-    @residents = Resident.search(search_params, params[:search])
+    @residents = Resident
+                .all
+                .search(search_params, params[:search])
   end
 
   def edit
@@ -36,7 +38,7 @@ class ResidentsController < ApplicationController
   end
 
   def search_params
-    ["residents.full_name", "residents.email", "residents.addresses", "residents.status"]
+    ["residents.full_name", "residents.email", "residents.status", "residents.phone",]
   end
   
 end
