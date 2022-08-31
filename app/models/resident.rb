@@ -3,7 +3,7 @@ class Resident < ApplicationRecord
   has_one_attached :photo
   
   enum status: { inactive: 0, active: 1 }
-
+  has_enumeration_for :status, with: ResidentEnum::Statuses, create_helpers: true
   has_many :addresses, as: :addressable
   validates :full_name, presence: true, length: { maximum: 255 }
   validates :document, presence: true, cpf: true

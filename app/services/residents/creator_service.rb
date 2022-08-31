@@ -11,7 +11,6 @@ class Residents::CreatorService < ApplicationService
 
   def initialize(args)
     @params = args.dig(:valid_params)
-    byebug
     @addresses_attributes = @params[:addresses_attributes].try(:values) || []
   end
 
